@@ -5,7 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
     
+    header{
+        position: fixed;
+        height: 80px;
+        width: 100%;
+        background-color: black;
+    }
+    nav{
+        height: 100%;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav h1 {
+        color: white;
+    }
+
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        width: 800px;
+        height: 700px;
+        background-color: white;
+        box-shadow: 0px 3px 5px 2px rgba(138, 138, 138, 0.336);
+        border-radius: 20px;
+    }
+
+</style>
+<body>
+    <header>
+        <nav>
+            <h1>Order system</h1>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <form action="">
+                <div class="f-header">
+                    <h1>Shop Master form</h1>
+                </div>
+                <div class="f-fields">
+                    <div class="fields">
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="fields">
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="fields">
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="fields">
+                        <div class="field-title">
+                            <h2>Shopping items:</h2>
+                        </div>
+                        <div class="shopping">
+                            <label for="item1">Item Name:</label>
+                            <input type="text" name="item1" required>
+
+                            <label for="quantity1">Quantity:</label>
+                            <input type="number" name="quantity1" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="f-footer">
+                    <button type="button" id="addItem">Add Item</button>
+                    <button type="submit">Send Order</button>
+                </div>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
