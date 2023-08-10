@@ -6,7 +6,10 @@ const orderSchema = new mongoose.Schema({
     address: String,
     email: String,
     item: [{name: String, quantity: Number}],
-    createdAt: {type: Date, default: Date.now }
+    createdAt: {
+        type: Date, 
+        default: Date.now() 
+    }
 })
 
 const order = mongoose.model('order', orderSchema)
