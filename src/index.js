@@ -70,6 +70,16 @@ app.post("/order", async (req, res) => {
   }
 });
 
+app.get("/dashboard", async (req, res) => {
+  try {
+    const orders = await Order.find();
+    res.render("dashboard.ejs", { orders: orders });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error fetching orders" });
+  }
+});
+
 app.listen(port, () =>
   console.log(`Example app listening on port http://localhost:${port}`)
 );
