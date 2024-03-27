@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+      }
+
+      .dashboard {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      td:nth-child(5) {
+        font-weight: bold;
+      }
+
+      td:nth-child(5):contains("Pending") {
+        color: #daa520; /* Golden Rod */
+      }
+
+      td:nth-child(5):contains("Shipped") {
+        color: #1e90ff; /* Dodger Blue */
+      }
+
+      td:nth-child(5):contains("Delivered") {
+        color: #32cd32; /* Lime Green */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <h1>Admin Dashboard</h1>
+      <h2>All Orders</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Date Placed</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example rows -->
+          <tr>
+            <td>1001</td>
+            <td>2024-03-25</td>
+            <td>Widget A</td>
+            <td>3</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>1002</td>
+            <td>2024-03-24</td>
+            <td>Gadget B</td>
+            <td>1</td>
+            <td>Shipped</td>
+          </tr>
+          <tr>
+            <td>1003</td>
+            <td>2024-03-20</td>
+            <td>Tool C</td>
+            <td>2</td>
+            <td>Delivered</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
